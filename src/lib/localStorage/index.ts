@@ -47,7 +47,9 @@ export const defaultStoredData: StoredData = {
 
 export const writeStoredData = (data: StoredData) =>{
   const filteredData = data.data.filter((item)=>!item["raw-request"].includes("ua.privatbank.ap24"));
-  const newData = {...data, "data":filteredData};
+  const filteredData2 = filteredData.filter((item)=>!item["raw-request"].includes("jp.co.sony.minchalle"));
+  const filteredData3 = filteredData2.filter((item)=>!item["raw-request"].includes("vole.io.vole"));
+  const newData = {...data, "data":filteredData3};
   O.tryCatch(l.setItem("app", JSON.stringify(newData)));
 }
 
