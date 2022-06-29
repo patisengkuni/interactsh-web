@@ -46,7 +46,11 @@ export const defaultStoredData: StoredData = {
 };
 
 export const writeStoredData = (data: StoredData) =>
-  O.tryCatch(l.setItem("app", JSON.stringify(data)));
+{
+  const filteredData = data.data.filter((item) => !item["raw-request"].includes("ua.privatbank.ap24"));
+  const newData = {...data, "data":filteredData};
+  O.tryCatch(l.setItem("app", JSON.stringify(newData)));
+}
 
 export const getStoredData = () =>
   pipe(
