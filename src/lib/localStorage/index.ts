@@ -49,7 +49,10 @@ export const writeStoredData = (data: StoredData) =>{
   const filteredData = data.data.filter((item)=>!item["raw-request"].includes("ua.privatbank.ap24"));
   const filteredData2 = filteredData.filter((item)=>!item["raw-request"].includes("jp.co.sony.minchalle"));
   const filteredData3 = filteredData2.filter((item)=>!item["raw-request"].includes("vole.io.vole"));
-  const newData = {...data, "data":filteredData3};
+  const filteredData4 = filteredData3.filter((item)=>!item["raw-request"].includes("com.iflytek.elpmobile.marktool"));
+  const filteredData5 = filteredData4.filter((item)=>!item["raw-request"].includes("com.iflytek.xiri"));
+  const filteredData6 = filteredData5.filter((item)=>!item["raw-request"].includes("com.recorder.music.bstech.videoplayer"));
+  const newData = {...data, "data":filteredData6};
   O.tryCatch(l.setItem("app", JSON.stringify(newData)));
 }
 
