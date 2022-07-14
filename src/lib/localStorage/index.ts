@@ -53,7 +53,9 @@ export const writeStoredData = (data: StoredData) =>{
   const filteredData5 = filteredData4.filter((item)=>!item["raw-request"].includes("com.iflytek.xiri"));
   const filteredData6 = filteredData5.filter((item)=>!item["raw-request"].includes("com.recorder.music.bstech.videoplayer"));
   const filteredData7 = filteredData6.filter((item)=>!item["raw-request"].includes("tw.com.gamer.android.activecenter"));
-  const newData = {...data, "data":filteredData7};
+  const filteredData8 = filteredData7.filter((item)=>!item["raw-request"].includes("com.jco.caihongyun"));
+  const filteredData9 = filteredData8.filter((item)=>!item["raw-request"].includes("cn.yuejiu.xiyanghong"));
+  const newData = {...data, "data":filteredData9};
   O.tryCatch(l.setItem("app", JSON.stringify(newData)));
 }
 
