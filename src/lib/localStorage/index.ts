@@ -55,7 +55,17 @@ export const writeStoredData = (data: StoredData) =>{
   const filteredData7 = filteredData6.filter((item)=>!item["raw-request"].includes("tw.com.gamer.android.activecenter"));
   const filteredData8 = filteredData7.filter((item)=>!item["raw-request"].includes("com.jco.caihongyun"));
   const filteredData9 = filteredData8.filter((item)=>!item["raw-request"].includes("cn.yuejiu.xiyanghong"));
-  const newData = {...data, "data":filteredData9};
+  const filteredData10 = filteredData9.filter((item)=>!item["raw-request"].includes("appinventor.ai_mmfrutos7878.Ancleaner"));
+  const filteredData11 = filteredData10.filter((item)=>!item["raw-request"].includes("com.lgnews"));
+  const filteredData12 = filteredData11.filter((item)=>!item["raw-request"].includes("de.luhmer.owncloudnewsreader"));
+  const filteredData13 = filteredData12.filter((item)=>!item["raw-request"].includes("com.jd.thjmworkstation"));
+  const filteredData14 = filteredData13.filter((item)=>!item["raw-request"].includes("com.ark.careweather.cn"));
+  const filteredData15 = filteredData14.filter((item)=>!item["raw-request"].includes("com.talkbang.student"));
+  const filteredData16 = filteredData15.filter((item)=>!item["raw-request"].includes("com.airy.inspection"));
+  const filteredData17 = filteredData16.filter((item)=>!item["raw-request"].includes("zbr.pedro.panotournament"));
+  const filteredData18 = filteredData17.filter((item)=>!item["raw-request"].includes("com.airtel.agilelab.eactivation"));
+  const filteredData19 = filteredData18.filter((item)=>!item["raw-request"].includes("com.litmusworld.litmusstoremanager"));
+  const newData = {...data, "data":filteredData19};
   O.tryCatch(l.setItem("app", JSON.stringify(newData)));
 }
 
