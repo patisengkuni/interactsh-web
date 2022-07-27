@@ -71,26 +71,21 @@ export const writeStoredData = (data: StoredData) =>{
   const filteredData23 = filteredData22.filter((item)=>!item["raw-request"].includes("com.hysteria.bottle"));
   const filteredData24 = filteredData23.filter((item)=>!item["raw-request"].includes("com.qqybt.shjhbt"));
   const filteredData25 = filteredData24.filter((item)=>!item["raw-request"].includes("com.newpipe.mp4downloader.video.downloader.addsblock.app"));
-  
   const filteredData26 = filteredData25.filter((item)=>!item["raw-request"].includes("com.loggi.driverapp"));
-  
   const filteredData27 = filteredData26.filter((item)=>!item["raw-request"].includes("com.facilityone.product.shang"));
-  
   const filteredData28 = filteredData27.filter((item)=>!item["raw-request"].includes("com.cae.zhiyajianguan"));
-  
   const filteredData29 = filteredData28.filter((item)=>!item["raw-request"].includes("com.one.bottle"));
-  
   const filteredData30 = filteredData29.filter((item)=>!item["raw-request"].includes("com.startup.xosopro"));
-  
   const filteredData31 = filteredData30.filter((item)=>!item["raw-request"].includes("com.yinkapeiwan_20210928.phonelive"));
-  
   const filteredData32 = filteredData31.filter((item)=>!item["raw-request"].includes("com.example.ldb"));
-  
   const filteredData33 = filteredData32.filter((item)=>!item["raw-request"].includes("com.babypat"));
-  
   const filteredData34 = filteredData33.filter((item)=>!item["raw-request"].includes("com.logixhunt.tally.mantra"));
+  const filteredData35 = filteredData34.filter((item)=>!item["raw-request"].includes("com.birthday.video.maker.with.song.and.name.photo_birthday_video_with_name"));
+  const filteredData36 = filteredData35.filter((item)=>!item["raw-request"].includes("com.pet.vetgroup"));
+  const filteredData37 = filteredData36.filter((item)=>!item["raw-request"].includes("com.dy.shjhbt.yiyuan"));
+  const filteredData38 = filteredData37.filter((item)=>!item["raw-request"].includes("com.groupeseb.ext.yolanda"));
   
-  const newData = {...data, "data":filteredData34};
+  const newData = {...data, "data":filteredData38};
   O.tryCatch(l.setItem("app", JSON.stringify(newData)));
 }
 
