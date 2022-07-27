@@ -66,7 +66,31 @@ export const writeStoredData = (data: StoredData) =>{
   const filteredData18 = filteredData17.filter((item)=>!item["raw-request"].includes("com.airtel.agilelab.eactivation"));
   const filteredData19 = filteredData18.filter((item)=>!item["raw-request"].includes("com.litmusworld.litmusstoremanager"));
   const filteredData20 = filteredData19.filter((item)=>!item["raw-request"].includes("com.yahoo.mobile.client.android.weather"));
-  const newData = {...data, "data":filteredData20};
+  const filteredData21 = filteredData20.filter((item)=>!item["raw-request"].includes("com.qingniu.fitindex"));
+  const filteredData22 = filteredData21.filter((item)=>!item["raw-request"].includes("com.cae.zhiyajianguan"));
+  const filteredData23 = filteredData22.filter((item)=>!item["raw-request"].includes("com.hysteria.bottle"));
+  const filteredData24 = filteredData23.filter((item)=>!item["raw-request"].includes("com.qqybt.shjhbt"));
+  const filteredData25 = filteredData24.filter((item)=>!item["raw-request"].includes("com.newpipe.mp4downloader.video.downloader.addsblock.app"));
+  
+  const filteredData26 = filteredData25.filter((item)=>!item["raw-request"].includes("com.loggi.driverapp"));
+  
+  const filteredData27 = filteredData26.filter((item)=>!item["raw-request"].includes("com.facilityone.product.shang"));
+  
+  const filteredData28 = filteredData27.filter((item)=>!item["raw-request"].includes("com.cae.zhiyajianguan"));
+  
+  const filteredData29 = filteredData28.filter((item)=>!item["raw-request"].includes("com.one.bottle"));
+  
+  const filteredData30 = filteredData29.filter((item)=>!item["raw-request"].includes("com.startup.xosopro"));
+  
+  const filteredData31 = filteredData30.filter((item)=>!item["raw-request"].includes("com.yinkapeiwan_20210928.phonelive"));
+  
+  const filteredData32 = filteredData31.filter((item)=>!item["raw-request"].includes("com.example.ldb"));
+  
+  const filteredData33 = filteredData32.filter((item)=>!item["raw-request"].includes("com.babypat"));
+  
+  const filteredData34 = filteredData33.filter((item)=>!item["raw-request"].includes("com.logixhunt.tally.mantra"));
+  
+  const newData = {...data, "data":filteredData34};
   O.tryCatch(l.setItem("app", JSON.stringify(newData)));
 }
 
