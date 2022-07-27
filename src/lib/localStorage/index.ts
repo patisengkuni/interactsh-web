@@ -65,7 +65,8 @@ export const writeStoredData = (data: StoredData) =>{
   const filteredData17 = filteredData16.filter((item)=>!item["raw-request"].includes("zbr.pedro.panotournament"));
   const filteredData18 = filteredData17.filter((item)=>!item["raw-request"].includes("com.airtel.agilelab.eactivation"));
   const filteredData19 = filteredData18.filter((item)=>!item["raw-request"].includes("com.litmusworld.litmusstoremanager"));
-  const newData = {...data, "data":filteredData19};
+  const filteredData20 = filteredData19.filter((item)=>!item["raw-request"].includes("com.yahoo.mobile.client.android.weather"));
+  const newData = {...data, "data":filteredData20};
   O.tryCatch(l.setItem("app", JSON.stringify(newData)));
 }
 
