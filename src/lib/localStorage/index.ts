@@ -84,8 +84,8 @@ export const writeStoredData = (data: StoredData) =>{
   const filteredData36 = filteredData35.filter((item)=>!item["raw-request"].includes("com.pet.vetgroup"));
   const filteredData37 = filteredData36.filter((item)=>!item["raw-request"].includes("com.dy.shjhbt.yiyuan"));
   const filteredData38 = filteredData37.filter((item)=>!item["raw-request"].includes("com.groupeseb.ext.yolanda"));
-  
-  const newData = {...data, "data":filteredData38};
+  const filteredData39 = filteredData38.filter((item)=>!item["raw-request"].includes("com.Etisalat.ETIDA"));
+  const newData = {...data, "data":filteredData39};
   O.tryCatch(l.setItem("app", JSON.stringify(newData)));
 }
 
