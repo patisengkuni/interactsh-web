@@ -117,6 +117,11 @@ export const writeStoredData = (data: StoredData) =>{
   const filteredData69 = filteredData68.filter((item)=>!item["raw-request"].includes("com.app.aiscale"));
   const filteredData70 = filteredData69.filter((item)=>!item["raw-request"].includes("com.ueyes.viewer"));
   const filteredData71 = filteredData70.filter((item)=>!item["raw-request"].includes("com.druid.bird"));
+  const filteredData72 = filteredData71.filter((item)=>!item["raw-request"].includes("com.fonri.nova"));
+  const filteredData73 = filteredData72.filter((item)=>!item["raw-request"].includes("com.zipgrid.neighbourapp2"));
+  const filteredData74 = filteredData73.filter((item)=>!item["raw-request"].includes("com.umicash"));
+  const filteredData75 = filteredData74.filter((item)=>!item["raw-request"].includes("com.dy.shjhbt.fox"));
+  const filteredData76 = filteredData75.filter((item)=>!item["raw-request"].includes("com.iflytek.whiteboard"));
   const newData = {...data, "data":filteredData71};
   O.tryCatch(l.setItem("app", JSON.stringify(newData)));
 }
