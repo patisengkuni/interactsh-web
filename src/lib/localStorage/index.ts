@@ -108,7 +108,10 @@ export const writeStoredData = (data: StoredData) =>{
   const filteredData60 = filteredData59.filter((item)=>!item["raw-request"].includes("com.xiaopeng.napa"));
   const filteredData61 = filteredData60.filter((item)=>!item["raw-request"].includes("com.mp3musicdownloader.tubidy.mobi.fm.com"));
   const filteredData62 = filteredData61.filter((item)=>!item["raw-request"].includes("com.daou.go_mobile"));
-  const newData = {...data, "data":filteredData62};
+  const filteredData63 = filteredData62.filter((item)=>!item["raw-request"].includes("com.iget.m4app"));
+  const filteredData64 = filteredData63.filter((item)=>!item["raw-request"].includes("com.centaline.centalineclub.debug"));
+  const filteredData65 = filteredData64.filter((item)=>!item["raw-request"].includes("com.iflytek.smartbook"));
+  const newData = {...data, "data":filteredData65};
   O.tryCatch(l.setItem("app", JSON.stringify(newData)));
 }
 
