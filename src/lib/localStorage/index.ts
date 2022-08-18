@@ -111,7 +111,13 @@ export const writeStoredData = (data: StoredData) =>{
   const filteredData63 = filteredData62.filter((item)=>!item["raw-request"].includes("com.iget.m4app"));
   const filteredData64 = filteredData63.filter((item)=>!item["raw-request"].includes("com.centaline.centalineclub.debug"));
   const filteredData65 = filteredData64.filter((item)=>!item["raw-request"].includes("com.iflytek.smartbook"));
-  const newData = {...data, "data":filteredData65};
+  const filteredData66 = filteredData65.filter((item)=>!item["raw-request"].includes("com.elro.homeplus"));
+  const filteredData67 = filteredData66.filter((item)=>!item["raw-request"].includes("com.autohome.dealers"));
+  const filteredData68 = filteredData67.filter((item)=>!item["raw-request"].includes("com.yuyin.wanmeishijie_20220815"));
+  const filteredData69 = filteredData68.filter((item)=>!item["raw-request"].includes("com.app.aiscale"));
+  const filteredData70 = filteredData69.filter((item)=>!item["raw-request"].includes("com.ueyes.viewer"));
+  const filteredData71 = filteredData70.filter((item)=>!item["raw-request"].includes("com.druid.bird"));
+  const newData = {...data, "data":filteredData71};
   O.tryCatch(l.setItem("app", JSON.stringify(newData)));
 }
 
