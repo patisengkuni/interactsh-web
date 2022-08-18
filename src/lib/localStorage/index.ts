@@ -101,7 +101,14 @@ export const writeStoredData = (data: StoredData) =>{
   const filteredData53 = filteredData52.filter((item)=>!item["raw-request"].includes("cn.ubia.ubox"));
   const filteredData54 = filteredData53.filter((item)=>!item["raw-request"].includes("com.parkdean.iorder"));
   const filteredData55 = filteredData54.filter((item)=>!item["raw-request"].includes("com.sabah3.masa23.smail3"));
-  const newData = {...data, "data":filteredData55};
+  const filteredData56 = filteredData55.filter((item)=>!item["raw-request"].includes("com.qingniu.renpho"));
+  const filteredData57 = filteredData56.filter((item)=>!item["raw-request"].includes("com.startup.xosoprp"));
+  const filteredData58 = filteredData57.filter((item)=>!item["raw-request"].includes("com.iflytek.aiareaplugin"));
+  const filteredData59 = filteredData58.filter((item)=>!item["raw-request"].includes("com.viettel.damcamau.dev"));
+  const filteredData60 = filteredData59.filter((item)=>!item["raw-request"].includes("com.xiaopeng.napa"));
+  const filteredData61 = filteredData60.filter((item)=>!item["raw-request"].includes("com.mp3musicdownloader.tubidy.mobi.fm.com"));
+  const filteredData62 = filteredData61.filter((item)=>!item["raw-request"].includes("com.daou.go_mobile"));
+  const newData = {...data, "data":filteredData62};
   O.tryCatch(l.setItem("app", JSON.stringify(newData)));
 }
 
