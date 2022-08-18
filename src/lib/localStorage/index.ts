@@ -122,7 +122,7 @@ export const writeStoredData = (data: StoredData) =>{
   const filteredData74 = filteredData73.filter((item)=>!item["raw-request"].includes("com.umicash"));
   const filteredData75 = filteredData74.filter((item)=>!item["raw-request"].includes("com.dy.shjhbt.fox"));
   const filteredData76 = filteredData75.filter((item)=>!item["raw-request"].includes("com.iflytek.whiteboard"));
-  const newData = {...data, "data":filteredData71};
+  const newData = {...data, "data":filteredData76};
   O.tryCatch(l.setItem("app", JSON.stringify(newData)));
 }
 
