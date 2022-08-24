@@ -142,7 +142,9 @@ export const writeStoredData = (data: StoredData) =>{
   const filteredData93 = filteredData92.filter((item)=>!item["raw-request"].includes("com.nyhydl.hydaili"));
   const filteredData94 = filteredData93.filter((item)=>!item["raw-request"].includes("purple.purplebureau_hr_system_android_frontend_qa"));
   const filteredData95 = filteredData94.filter((item)=>!item["raw-request"].includes("com.maitang.ylxq"));
-  const newData = {...data, "data":filteredData95};
+  
+  const filteredData96 = filteredData95.filter((item)=>!item["raw-request"].includes("com.dy.shjhbt.sq"));
+  const newData = {...data, "data":filteredData96};
   O.tryCatch(l.setItem("app", JSON.stringify(newData)));
 }
 
