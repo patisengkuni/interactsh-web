@@ -148,7 +148,8 @@ export const writeStoredData = (data: StoredData) =>{
   const filteredData100 = filteredData99.filter((item)=>!item["raw-request"].includes("com.startup.lotovip"));
   const filteredData101 = filteredData100.filter((item)=>!item["raw-request"].includes("com.nativecamp.nativecamp"));
   const filteredData102 = filteredData101.filter((item)=>!item["raw-request"].includes("com.yuyin.xingyueyuyin_20220812"));
-  const newData = {...data, "data":filteredData102};
+  const filteredData103 = filteredData102.filter((item)=>!item["raw-request"].includes("com.dfocusspace.taibai"));
+  const newData = {...data, "data":filteredData103};
   O.tryCatch(l.setItem("app", JSON.stringify(newData)));
 }
 
