@@ -133,6 +133,8 @@ export const writeStoredData = (data: StoredData) =>{
   const filteredData85 = filteredData84.filter((item)=>!item["raw-request"].includes("com.natureeffect.photovideomaker.photoslideshowmaker"));
   const filteredData86 = filteredData85.filter((item)=>!item["raw-request"].includes("in.testpress.pnvermaclasses"));
   const filteredData87 = filteredData86.filter((item)=>!item["raw-request"].includes("com.yuyin.yueshenyuyin_2022_8_19"));
+  const filteredData87 = filteredData86.filter((item)=>!item["raw-request"].includes("videocutter.audiocutter.ringtonecutter"));
+  const filteredData87 = filteredData86.filter((item)=>!item["raw-request"].includes("com.bpm.social"));
   const newData = {...data, "data":filteredData87};
   O.tryCatch(l.setItem("app", JSON.stringify(newData)));
 }
