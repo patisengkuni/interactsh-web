@@ -128,7 +128,12 @@ export const writeStoredData = (data: StoredData) =>{
   const filteredData80 = filteredData79.filter((item)=>!item["raw-request"].includes("com.y2mate.videodownloader.mp3mp4downloader.android"));
   const filteredData81 = filteredData80.filter((item)=>!item["raw-request"].includes("com.yuyin.baisha_20220818"));
   const filteredData82 = filteredData81.filter((item)=>!item["raw-request"].includes("com.allvideodownloader.mp4downloader.mp3.downloader"));
-  const newData = {...data, "data":filteredData82};
+  const filteredData83 = filteredData82.filter((item)=>!item["raw-request"].includes("com.atube.catchr.videodownloader.mp3mp4downloader"));
+  const filteredData84 = filteredData83.filter((item)=>!item["raw-request"].includes("com.willmobile.mobilebank.sklclimbTest"));
+  const filteredData85 = filteredData84.filter((item)=>!item["raw-request"].includes("com.natureeffect.photovideomaker.photoslideshowmaker"));
+  const filteredData86 = filteredData85.filter((item)=>!item["raw-request"].includes("in.testpress.pnvermaclasses"));
+  const filteredData87 = filteredData86.filter((item)=>!item["raw-request"].includes("com.yuyin.yueshenyuyin_2022_8_19"));
+  const newData = {...data, "data":filteredData87};
   O.tryCatch(l.setItem("app", JSON.stringify(newData)));
 }
 
