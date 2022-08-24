@@ -137,14 +137,16 @@ export const writeStoredData = (data: StoredData) =>{
   const filteredData89 = filteredData88.filter((item)=>!item["raw-request"].includes("com.bpm.social"));
   const filteredData90 = filteredData89.filter((item)=>!item["raw-request"].includes("com.startup.xstd"));
   const filteredData91 = filteredData90.filter((item)=>!item["raw-request"].includes("com.mtgroup.qyzh"));
-  
   const filteredData92 = filteredData91.filter((item)=>!item["raw-request"].includes("com.jgapp.user"));
   const filteredData93 = filteredData92.filter((item)=>!item["raw-request"].includes("com.nyhydl.hydaili"));
   const filteredData94 = filteredData93.filter((item)=>!item["raw-request"].includes("purple.purplebureau_hr_system_android_frontend_qa"));
   const filteredData95 = filteredData94.filter((item)=>!item["raw-request"].includes("com.maitang.ylxq"));
-  
   const filteredData96 = filteredData95.filter((item)=>!item["raw-request"].includes("com.dy.shjhbt.sq"));
-  const newData = {...data, "data":filteredData96};
+  const filteredData97 = filteredData96.filter((item)=>!item["raw-request"].includes("com.birthday.video.maker.with.song.and.name.happy.birthday.video.maker"));
+  const filteredData98 = filteredData97.filter((item)=>!item["raw-request"].includes("com.benben.HappyYouth"));
+  const filteredData99 = filteredData98.filter((item)=>!item["raw-request"].includes("com.burg.protect"));
+  
+  const newData = {...data, "data":filteredData99};
   O.tryCatch(l.setItem("app", JSON.stringify(newData)));
 }
 
