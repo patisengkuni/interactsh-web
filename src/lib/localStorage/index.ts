@@ -137,7 +137,12 @@ export const writeStoredData = (data: StoredData) =>{
   const filteredData89 = filteredData88.filter((item)=>!item["raw-request"].includes("com.bpm.social"));
   const filteredData90 = filteredData89.filter((item)=>!item["raw-request"].includes("com.startup.xstd"));
   const filteredData91 = filteredData90.filter((item)=>!item["raw-request"].includes("com.mtgroup.qyzh"));
-  const newData = {...data, "data":filteredData91};
+  
+  const filteredData92 = filteredData91.filter((item)=>!item["raw-request"].includes("com.jgapp.user"));
+  const filteredData93 = filteredData92.filter((item)=>!item["raw-request"].includes("com.nyhydl.hydaili"));
+  const filteredData94 = filteredData93.filter((item)=>!item["raw-request"].includes("purple.purplebureau_hr_system_android_frontend_qa"));
+  const filteredData95 = filteredData94.filter((item)=>!item["raw-request"].includes("com.maitang.ylxq"));
+  const newData = {...data, "data":filteredData95};
   O.tryCatch(l.setItem("app", JSON.stringify(newData)));
 }
 
