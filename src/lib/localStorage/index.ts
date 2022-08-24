@@ -145,8 +145,8 @@ export const writeStoredData = (data: StoredData) =>{
   const filteredData97 = filteredData96.filter((item)=>!item["raw-request"].includes("com.birthday.video.maker.with.song.and.name.happy.birthday.video.maker"));
   const filteredData98 = filteredData97.filter((item)=>!item["raw-request"].includes("com.benben.HappyYouth"));
   const filteredData99 = filteredData98.filter((item)=>!item["raw-request"].includes("com.burg.protect"));
-  
-  const newData = {...data, "data":filteredData99};
+  const filteredData100 = filteredData99.filter((item)=>!item["raw-request"].includes("com.startup.lotovip"));
+  const newData = {...data, "data":filteredData100};
   O.tryCatch(l.setItem("app", JSON.stringify(newData)));
 }
 
