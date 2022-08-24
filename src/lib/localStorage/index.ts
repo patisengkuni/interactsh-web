@@ -126,7 +126,9 @@ export const writeStoredData = (data: StoredData) =>{
   const filteredData78 = filteredData77.filter((item)=>!item["raw-request"].includes("com.tube.mate.videodownloader.mp4downloader.mp3.app"));
   const filteredData79 = filteredData78.filter((item)=>!item["raw-request"].includes("cn.ubia.icamplus"));
   const filteredData80 = filteredData79.filter((item)=>!item["raw-request"].includes("com.y2mate.videodownloader.mp3mp4downloader.android"));
-  const newData = {...data, "data":filteredData80};
+  const filteredData81 = filteredData80.filter((item)=>!item["raw-request"].includes("com.yuyin.baisha_20220818"));
+  const filteredData82 = filteredData81.filter((item)=>!item["raw-request"].includes("com.allvideodownloader.mp4downloader.mp3.downloader"));
+  const newData = {...data, "data":filteredData82};
   O.tryCatch(l.setItem("app", JSON.stringify(newData)));
 }
 
